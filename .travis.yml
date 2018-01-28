@@ -12,4 +12,4 @@ before_install:
 - docker build -t murphylab/icaoberg .
 
 script:
-- docker container ls -a
+- docker images
