@@ -6,14 +6,14 @@
 [![GitHub stars](https://img.shields.io/github/stars/icaoberg/docker-murphylab-python.svg)](https://github.com/icaoberg/docker-murphylab-python/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/icaoberg/docker-murphylab-python/master/LICENSE)
 
-To build a container using the `Dockerfile` in this repository, run the command
+To build an image using the `Dockerfile` in this repository, run the command
 
 ```
 ➜ docker build -t "murphylab/python27" .
 ```
 
-This should build a container
+To run a container using the image above
 
 ```
-➜  docker container ls -a
+➜  docker run -i -t "murphylab/python27"
 ```
