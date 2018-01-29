@@ -8,6 +8,7 @@
 
 ![vim as IDE](./images/screenshot.png)
 
+This Dockerfile is used to build a [Singularity](http://singularity.lbl.gov/) container for members of the [Murphy Lab](http://murphylab.web.cmu.edu/) at the [Computational Biology Department](http://www.cbd.cmu.edu) at [Carnegie Mellon University](http://www.cmu.edu).
 
 To build an image using the `Dockerfile` in this repository, run the command
 
