@@ -1,10 +1,11 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
 MAINTAINER Ivan E. Cao-Berg <icaoberg@andrew.cmu.edu>
 LABEL Description="Personal container for development at the Murphy Lab in the Computational Biology Department at Carnegie Mellon University."
 LABEL Vendor="Carnegie Mellon University"
 LABEL Version="0.1"
 
+# Install vi and all needed packages
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update --fix-missing
 RUN apt-get install -y --no-install-recommends apt-utils
@@ -25,6 +26,13 @@ ENV UID 1000
 RUN useradd -m -s /bin/bash -N -u $UID $USERNAME
 RUN if [ ! -d /home/$USERNAME/ ]; then mkdir /home/$USERNAME/; fi
 WORKDIR /home/$USERNAME/
+
+# Create bindings, needed for CBD HPC computing
+RUN mkdir /scratch
+RUN mkdir /share
+RUN mkdir /images
+RUN mkdir /projects
+RUN mkdir /containers
 
 # prepare IDE
 USER $USERNAME
