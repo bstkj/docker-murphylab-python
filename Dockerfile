@@ -18,6 +18,7 @@ RUN pip install tabulate
 RUN pip install scikit-learn
 RUN pip install pandas
 RUN pip install Pillow
+RUN pip install javabridge python-bioformats
 
 # Configure environment
 ENV SHELL /bin/bash
