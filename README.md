@@ -8,15 +8,26 @@
 
 ![vim as IDE](./images/screenshot.png)
 
-This Dockerfile is used to build a [Singularity](http://singularity.lbl.gov/) container for members of the [Murphy Lab](http://murphylab.web.cmu.edu/) at the [Computational Biology Department](http://www.cbd.cmu.edu) at [Carnegie Mellon University](http://www.cmu.edu) for use in the department's HPC.
+This Dockerfile is used to build a [Singularity](http://singularity.lbl.gov/) container for members of the [Murphy Lab](http://murphylab.web.cmu.edu/) at the [Computational Biology Department](http://www.cbd.cmu.edu) at [Carnegie Mellon University](http://www.cmu.edu) for use in the department's HPC cluster.
 
-To build an image using the `Dockerfile` in this repository, run the command
+## Docker build
+To [build](https://docs.docker.com/engine/reference/commandline/build/) an image using the `Dockerfile` in this repository, run the command
 
 ```
 ➜ docker build -t "murphylab/python27" .
 ```
 
-To run a container using the image above
+## Docker build
+
+To [pull](https://docs.docker.com/engine/reference/commandline/pull/) the latest image from Docker hub, run the command
+
+```
+➜ docker pull icaoberg/murphylab-python
+```
+
+## Docker run
+
+To [run](https://docs.docker.com/engine/reference/run/) a container using the image above, run the command
 
 ```
 ➜  docker run -i -t "murphylab/python27"
