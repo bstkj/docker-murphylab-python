@@ -9,7 +9,7 @@ LABEL Version="0.1"
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update --fix-missing
 RUN apt-get install -y --no-install-recommends apt-utils
-RUN apt-get install -y build-essential git python python-dev python-setuptools nginx supervisor bcrypt libssl-dev libffi-dev libpq-dev vim redis-server rsyslog wget
+RUN apt-get install -y build-essential git python python-dev python-setuptools nginx supervisor bcrypt libssl-dev libffi-dev libpq-dev vim redis-server rsyslog wget default-jdk
 RUN apt-get install -y python-numpy python-scipy python-matplotlib
 RUN apt-get install -y pandoc texlive-full
 RUN easy_install pip
