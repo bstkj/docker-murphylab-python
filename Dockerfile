@@ -44,3 +44,8 @@ RUN git clone https://github.com/Yggdroot/duoduo.git && mv duoduo/colors ~/.vim/
 RUN sed -i 's/solarized/duoduo/g' ~/.vimrc
 RUN sed -i 's/nerdtree_tabs_open_on_console_startup = 0/nerdtree_tabs_open_on_console_startup = 1/g' ~/.vimrc
 RUN vim +PluginInstall +qall
+
+# enable user to modify bioformats source code within the container
+USER root
+RUN chown -Rv ${USERNAME}:users /usr/local/lib/python2.7/dist-packages/bioformats
+USER $USERNAME
